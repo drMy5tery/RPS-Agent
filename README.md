@@ -35,6 +35,82 @@ set GOOGLE_API_KEY=your_google_ai_api_key  # Windows
 python main.py
 ```
 
+## Example Gameplay
+
+### Normal Match
+```
+==================================================
+  ROCK-PAPER-SCISSORS-PLUS
+==================================================
+
+Starting game...
+
+Welcome! I'm your AI Referee for Rock-Paper-Scissors-Plus.
+Rules: Best of 3 rounds. Valid moves: rock, paper, scissors, bomb.
+Rock > Scissors > Paper > Rock. Bomb beats all except another bomb.
+Each player can use bomb ONCE per game. Invalid moves waste the round.
+
+Your move: rock
+
+Round: 1
+User move: rock
+Bot move: scissors
+Winner: User
+Score: User 1 - Bot 0
+
+Your move: paper
+
+Round: 2
+User move: paper
+Bot move: rock
+Winner: User
+Score: User 2 - Bot 0
+
+Your move: scissors
+
+Round: 3
+User move: scissors
+Bot move: paper
+Winner: User
+Score: User 3 - Bot 0
+
+Final Result: User wins!
+
+Game Over! Thanks for playing!
+```
+
+### Invalid Move Scenario
+```
+Your move: hello
+
+Round: 1
+User move: hello (INVALID)
+Bot move: rock
+Winner: Bot
+Score: User 0 - Bot 1
+(Invalid move wastes the round - bot wins by default)
+```
+
+### Double Bomb Attempt
+```
+Your move: bomb
+
+Round: 1
+User move: bomb
+Bot move: scissors
+Winner: User
+Score: User 1 - Bot 0
+
+Your move: bomb
+
+Round: 2
+User move: bomb (INVALID - already used)
+Bot move: rock
+Winner: Bot  
+Score: User 1 - Bot 1
+(Second bomb attempt is invalid - round wasted)
+```
+
 ## Project Structure
 
 ```

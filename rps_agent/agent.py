@@ -50,7 +50,7 @@ IMPORTANT RULES:
 
 # Define the root agent
 root_agent = Agent(
-    model="gemini-2.5-flash-lite",
+    model="gemini-2.5-flash-lite-preview-09-2025",
     name="rps_plus_referee",
     description="AI Game Referee for Rock-Paper-Scissors-Plus",
     instruction=AGENT_INSTRUCTIONS,
